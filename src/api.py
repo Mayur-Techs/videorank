@@ -1,3 +1,4 @@
+
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from .scraper import search_youtube
@@ -17,6 +18,10 @@ app.add_middleware(
 @app.get("/")
 def home():
     return {"message": "VideoRank API is running"}
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 
 @app.get("/search")
