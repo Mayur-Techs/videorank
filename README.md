@@ -4,13 +4,21 @@ VideoRank — YouTube Data Intelligence Tool
 VideoRank is a backend-driven system that extracts, processes, and ranks YouTube video data to identify high-performing and low-competition content opportunities.
 
 ⚙️ Features
-Scraping without official API
-Data filtering + scoring
-Multiple modes (best, trending, opportunity)
-REST API (FastAPI)
-CSV export
-Frontend dashboard
-Deployed system
+- Custom YouTube data extraction without official API
+- Modular scraping and data processing pipeline
+- Scoring and ranking algorithm for content evaluation
+- Multiple analysis modes (best, trending, opportunity)
+- REST API built with FastAPI
+- CSV export for downstream usage
+- Responsive frontend interface
+- Containerized setup using Docker
+
+Engineering Focus:
+- Backend system design and modular architecture
+- Data extraction and processing pipelines
+- API development and structured responses
+- Automation-ready workflows
+- Clean and maintainable code structure
 
 
 🧱 Tech Stack
