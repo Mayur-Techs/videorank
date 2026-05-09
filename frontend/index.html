@@ -163,7 +163,7 @@ a {
     <button onclick="copyTop()">Copy Top Video</button>
 </div>
 
-<div class="loading" id="loading">Loading best results...</div>
+<div class="loading" id="loading">⚡ Initial startup may take 20-40 seconds while the server wakes up.</div>
 
 <div id="stats"></div>
 <div class="results" id="results"></div>
@@ -171,6 +171,17 @@ a {
 </div>
 
 <script>
+
+window.onload = async function () {
+    try {
+        await fetch("https://youtube-scraper-mxsc.onrender.com/health");
+        console.log("Backend awake");
+    } catch (err) {
+        console.log("Backend wake failed");
+    }
+};
+
+
 let currentMode = "best";
 let currentResults = [];
 
